@@ -1,0 +1,9 @@
+1) codesign --options runtime --force --timestamp -strict --sign "Developer ID Application: XXXXX" name_of_bundle
+
+2) compress plugin file to .zip
+
+3) xcrun altool --notarize-app --primary-bundle-id "com.xxx.xxx" --username "xxx@xxx.com" --password "xxxx-xxxx-xxxx-xxxx" --asc-provider provider_shortname --file name_of_bundle.zip
+
+4) Unzip compressed and notarized file
+	
+5) xcrun stapler staple "name_of_bundle.plugin" 
